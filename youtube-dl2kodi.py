@@ -23,7 +23,7 @@ def main(argv):
         elif opt in ("-f", "--file"):
             filename = arg
 
-    base_file = os.path.splitext(os.path.basename(filename))[0]
+    base_file = os.path.splitext(filename)[0]
     filejson = f"{base_file}.info.json"
     with open(filejson) as data_file:
         data = json.load(data_file)
